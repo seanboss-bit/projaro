@@ -5,9 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <div >
-    INTRO TO JAVASCRIPT
+  <header>INTRO TO JAVASCRIPT</header>
+
+  <section>
+    <form id="my-form">
+      <h1 class="name-form">My Form</h1>
+      <div class="msg"></div>
+      <div class="box">
+        <label> name</label>
+        <input type="text" placeholder="Enter Name" class="input1" />
+      </div>
+      <div class="box">
+        <label>email</label>
+        <input type="email" placeholder="Enter Email" id="email1" required />
+      </div>
+      <input type="submit" value="submit" class="btn" />
+    </form>
+    <ul id="my-list" class="items"></ul>
+    <!-- <ul class="items">
+      <li class="item">item 1</li>
+      <li class="item">item 2</li>
+      <li class="item">item 3</li>
+      <li class="item">item 4</li>
+    </ul> -->
+  </section>
+
+  <div class="company">
   </div>
   <script src="./app.js"></script>
 </html>

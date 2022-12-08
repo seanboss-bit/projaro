@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header {
+  background: gray;
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px;
+}
+
+form h1 {
+  margin-bottom: 30px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-transform: capitalize;
+}
+.box input {
+  padding: 8px;
+}
+.btn {
+  width: 100%;
+  margin-top: 15px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
+#my-form {
+  background: rgb(183, 183, 183);
+  width: 300px;
+  padding: 20px;
+}
+.items {
+  list-style: none;
+  margin-top: 10px;
+  width: 53%;
+}
+.item,
+.items li {
+  background: rgb(183, 183, 183);
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.error {
+  background: red;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.success {
+  background-color: green;
+  color: white;
+  text-transform: capitalize;
+}
+.inactive {
+  display: none;
+}
+.company {
+  padding: 20px 10px;
+}
+.company > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
