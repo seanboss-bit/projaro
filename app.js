@@ -280,81 +280,230 @@ const canDrink = ages.filter((age) => {
 // const nameForm = document.querySelector(".name-form");
 
 // nameForm.innerHTML = 'sean'
-const allUnit = [];
+// const allUnit = [];
 
-const nameInput = document.querySelector(".input1");
-const emailInput = document.querySelector("#email1");
-const msg = document.querySelector(".msg");
-const btn = document.querySelector(".btn");
-const mylist = document.querySelector("#my-list");
+// const nameInput = document.querySelector(".input1");
+// const emailInput = document.querySelector("#email1");
+// const msg = document.querySelector(".msg");
+// const btn = document.querySelector(".btn");
+// const mylist = document.querySelector("#my-list");
+// const searchBar = document.querySelector("#search-bar");
 
-btn.addEventListener("click", (e) => {
-  let id = 0;
-  e.preventDefault();
-  msg.innerHTML = `welcome ${nameInput.value}`;
+// btn.addEventListener("click", (e) => {
+//   let id = 0;
+//   e.preventDefault();
+//   msg.innerHTML = `welcome ${nameInput.value}`;
 
-  if (nameInput.value === "" || emailInput.value === "") {
-    msg.classList.add("error");
-    msg.innerHTML = "<p>pls enter all fields</p>";
+//   if (nameInput.value === "" || emailInput.value === "") {
+//     msg.classList.add("error");
+//     msg.innerHTML = "<p>pls enter all fields</p>";
 
-    setTimeout(() => {
-      msg.remove();
-    }, 3000);
-  } else {
-    if (emailInput?.value.includes("@") === false) {
-      msg.classList.add("error");
-      msg.innerHTML = "<p>pls enter a valid email</p>";
-    } else {
-      allUnit.push({
-        id: id + 1,
-        name: nameInput.value,
-        email: emailInput.value,
-      });
-      console.log(allUnit);
-      msg.classList.add("success");
-      const li = document.createElement("li");
-      allUnit.map((item) => {
-        li.innerHTML = `${item.name}: ${item.email} <i class="fa-solid fa-trash"></i>`;
-        mylist.appendChild(li);
-      });
-      msg.innerHTML = `welcome ${nameInput.value}`;
-      setTimeout(() => {
-        msg.classList.add("inactive");
-      }, 3000);
-      setTimeout(() => {
-        msg.classList.remove("inactive");
-      }, 5000);
+//     setTimeout(() => {
+//       msg.remove();
+//     }, 3000);
+//   } else {
+//     if (emailInput?.value.includes("@") === false) {
+//       msg.classList.add("error");
+//       msg.innerHTML = "<p>pls enter a valid email</p>";
+//     } else {
+//       allUnit.push({
+//         id: id + 1,
+//         name: nameInput.value,
+//         email: emailInput.value,
+//       });
+//       console.log(allUnit);
+//       msg.classList.add("success");
+//       const li = document.createElement("li");
+//       allUnit.map((item) => {
+//         li.innerHTML = `${item.name}: ${item.email} <i class="fa-solid fa-trash"></i>`;
+//         mylist.appendChild(li);
+//       });
+//       msg.innerHTML = `welcome ${nameInput.value}`;
+//       setTimeout(() => {
+//         msg.classList.add("inactive");
+//       }, 3000);
+//       setTimeout(() => {
+//         msg.classList.remove("inactive");
+//       }, 5000);
 
-      nameInput.value = "";
-      emailInput.value = "";
-    }
-  }
-});
+//       nameInput.value = "";
+//       emailInput.value = "";
+//     }
+//   }
+// });
 
-const showCompanies = () => {
-  const companyDiv = document.querySelector(".company");
-  const need = companies.map((company) => {
-    return ` <div>
-    <p>${company.name}</p>
-    <p>${company.category}</p>
-    <p>${company.start}</p>
-    <p>${company.end}</p>
-    <button onclick=handledelete(${company.id})><i class="fa-solid fa-trash"></i></button>
-  </div> `;
-  });
-  companyDiv.innerHTML = need;
-};
-showCompanies();
+// const showCompanies = (anything) => {
+//   const companyDiv = document.querySelector(".company");
+//   const need = anything.map((company) => {
+//     return ` <div>
+//     <p>${company.name}</p>
+//     <p>${company.category}</p>
+//     <p>${company.start}</p>
+//     <p>${company.end}</p>
+//     <button onclick=handledelete(${company.id})><i class="fa-solid fa-trash"></i></button>
+//   </div> `;
+//   });
+//   companyDiv.innerHTML = need;
+// };
+// showCompanies(companies);
 
-const handledelete = (id) => {
-  const value = companies.filter((item) => item.id === id)[0];
-  const index = companies.indexOf(value);
+// let sea = [];
 
-  if (index > -1) {
-    companies.splice(index, 1);
-    showCompanies();
-  }
-  return companies;
+// const handledelete = (id) => {
+//   const value = companies.filter((item) => item.id === id)[0];
+//   console.log(value);
+//   const index = companies.indexOf(value);
+//   console.log(index);
 
-};
+//   if (index > -1) {
+//     companies.splice(index, 1);
+//     showCompanies(companies);
+//   }
+//   // return companies
+// };
+// searchBar.addEventListener("keyup", () => {
+//   let text = searchBar.value.toLowerCase();
+//   companies.filter((item) => {
+//     if (searchBar.value === "") {
+//       sea = [];
+//       showCompanies(companies);
+//       return item;
+//     } else if (
+//       item.name.toLowerCase().includes(text) ||
+//       item.category.toLowerCase().includes(text)
+//     ) {
+//       sea.push(item);
+//       showCompanies(sea);
+//     }
+//   });
+// });
 
+// const addBtn = document.querySelector("#add");
+// const subBtn = document.querySelector("#subtract");
+// const nultiplyBtn = document.querySelector("#multiply");
+// const num1Input = document.querySelector("#first-number");
+// const num2Input = document.querySelector("#secondNumber");
+// const result = document.querySelector("#result");
+
+// const addNum = () => {
+//   if (num1Input.value === "" || num2Input.value === "") {
+//     alert("Enter all fields");
+//   } else {
+//     const sum = Number(num1Input.value) + Number(num2Input.value);
+
+//     const li = document.createElement("li");
+
+//     li.innerHTML = `The Sum of ${num1Input.value} and ${num2Input.value} is ${sum}`;
+
+//     result.appendChild(li);
+//     num1Input.value = "";
+//     num2Input.value = "";
+//   }
+// };
+// const subNum = () => {
+//   if (num1Input.value === "" || num2Input.value === "") {
+//     alert("Enter all fields");
+//   } else {
+//     const sum = Number(num1Input.value) - Number(num2Input.value);
+
+//     const li = document.createElement("li");
+
+//     li.innerHTML = `The Difference of ${num1Input.value} and ${num2Input.value} is ${sum}`;
+
+//     result.appendChild(li);
+//     num1Input.value = "";
+//     num2Input.value = "";
+//   }
+// };
+// const multiply = () => {
+//   if (num1Input.value === "" || num2Input.value === "") {
+//     alert("Enter all fields");
+//   } else {
+//     const sum = Number(num1Input.value) * Number(num2Input.value);
+
+//     const li = document.createElement("li");
+
+//     li.innerHTML = `The Product of ${num1Input.value} and ${num2Input.value} is ${sum}`;
+
+//     result.appendChild(li);
+//     num1Input.value = "";
+//     num2Input.value = "";
+//   }
+// };
+
+// addBtn.addEventListener("click", addNum);
+// subBtn.addEventListener("click", subNum);
+// nultiplyBtn.addEventListener("click", multiply);
+// const correctAnswers = ["B", "B", "A", "B"];
+// const form = document.querySelector(".question");
+// const result = document.querySelector(".result");
+// const percent = document.querySelector(".percent");
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   // setting a Score to 0
+
+//   let score = 0;
+
+//   // Getging the value answer user selected
+//   const userAnswers = [
+//     form.q1.value,
+//     form.q2.value,
+//     form.q3.value,
+//     form.q4.value,
+//   ];
+
+//   // Checking for Correct Answer
+
+//   userAnswers.forEach((answer, index) => {
+//     if (answer === correctAnswers[index]) {
+//       score += 25;
+//     }
+//   });
+
+//   // Scroll Up to result section
+
+//   scrollTo(0, 0);
+
+//   // Display Result Section
+//   result.classList.remove("d-none");
+
+//   // display value on Html
+
+//   let output = 0;
+//   const timer = setInterval(() => {
+//     result.querySelector("span").textContent = `${score}%`;
+//     if (output === score) {
+//       clearInterval(timer);
+//     } else {
+//       output++;
+//     }
+//   }, 3000);
+// });
+
+// function name (julliet){
+//   console.log(julliet)
+// }
+
+// name(33)
+
+// const sean=(pa)=>{
+//   console.log(pa)
+// }
+
+// sean(true)
+
+// const timer = (time) => {
+//   setTimeout(() => {
+//     console.log(true);
+//   }, time);
+// };
+
+// timer(10000);
+
+// let a = 0;
+// while (a < 10) {
+//   console.log(a);
+//   a++;
+// }

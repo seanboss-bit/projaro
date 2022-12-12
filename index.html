@@ -13,8 +13,30 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- CSS only -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    /> -->
   </head>
-  <header>INTRO TO JAVASCRIPT</header>
+  <!-- <body class="calc-body">
+    <h1>mini calculator</h1>
+    <div>
+      <input type="number" name="" id="first-number" />
+      <input type="number" name="" id="secondNumber" />
+    </div>
+    <div>
+      <button id="add">add</button>
+      <button id="subtract">subtract</button>
+      <button id="multiply">multiply</button>
+    </div>
+    <ul id="result">
+      <li>the sum of 1 and 2 is 3</li>
+    </ul>
+  </body> -->
+  <!-- <header>INTRO TO JAVASCRIPT <input type="text" id="search-bar" placeholder="Search company" /></header>
 
   <section>
     <form id="my-form">
@@ -31,15 +53,141 @@
       <input type="submit" value="submit" class="btn" />
     </form>
     <ul id="my-list" class="items"></ul>
-    <!-- <ul class="items">
+     <ul class="items">
       <li class="item">item 1</li>
       <li class="item">item 2</li>
       <li class="item">item 3</li>
       <li class="item">item 4</li>
-    </ul> -->
+    </ul> 
   </section>
 
-  <div class="company">
-  </div>
-  <script src="./app.js"></script>
+  <div class="company"></div> -->
+  <body>
+    <div class="background">
+      <div class="container text-center mb-4">
+        <h1>Programming Quiz</h1>
+      </div>
+    </div>
+    <section class="result container text-center d-none">
+      <p>You are <span class="percent"></span> ready</p>
+    </section>
+    <form class="container-fluid question">
+      <section class="container">
+        <h4 class="pt-3 pb-3">Let's Start the questions...</h4>
+
+        <p>1.) Javascript and java are the same thing.</p>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="q1"
+            id="flexRadioDefault1"
+            value="A"
+          />
+          <label class="form-check-label color" for="flexRadioDefault1">
+            Of Course!
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="q1"
+            id="flexRadioDefault2"
+            checked
+            value="B"
+          />
+          <label class="form-check-label color" for="flexRadioDefault2">
+            No, despite having close concept and names they have many
+            differences
+          </label>
+        </div>
+
+        <p>2.) How can you use Javascript on the backend</p>
+        <div class="form-check">
+          <input
+            value="A"
+            class="form-check-input"
+            type="radio"
+            name="q2"
+            id="flexRadioDefault3"
+          />
+          <label class="form-check-label color" for="flexRadioDefault3">
+            Javascript is not for backend
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            value="B"
+            class="form-check-input"
+            type="radio"
+            name="q2"
+            id="flexRadioDefault4"
+            checked
+          />
+          <label class="form-check-label color" for="flexRadioDefault4">
+            Use Node.js
+          </label>
+        </div>
+
+        <p>3.) What should you study to learn deeper about Web Development</p>
+        <div class="form-check">
+          <input
+            value="A"
+            class="form-check-input"
+            type="radio"
+            name="q3"
+            id="flexRadioDefault5"
+          />
+          <label class="form-check-label color" for="flexRadioDefault5">
+            Html| Css| Javascript
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="q3"
+            id="flexRadioDefault6"
+            checked
+          />
+          <label
+            value="B"
+            class="form-check-label color"
+            for="flexRadioDefault6"
+          >
+            Wordpress
+          </label>
+        </div>
+        <p>4.) What is needed to be a great programmer</p>
+        <div class="form-check">
+          <input
+            value="A"
+            class="form-check-input"
+            type="radio"
+            name="q4"
+            id="flexRadioDefault7"
+          />
+          <label class="form-check-label color" for="flexRadioDefault7">
+            You have to be a genius
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            value="B"
+            class="form-check-input"
+            type="radio"
+            name="q4"
+            id="flexRadioDefault8"
+            checked
+          />
+          <label class="form-check-label color" for="flexRadioDefault8">
+            Have consistency
+          </label>
+        </div>
+        <input type="submit" value="Submit" class="button mb-3 mt-3" />
+      </section>
+    </form>
+    <script src="./app.js"></script>
+  </body>
 </html>
